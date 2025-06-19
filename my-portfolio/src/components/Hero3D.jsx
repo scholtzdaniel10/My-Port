@@ -3,8 +3,8 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
 function CreatorStudioModel() {
-  // Replace with your Google Drive direct link:
-  const { scene } = useGLTF("https://drive.google.com/file/d/1FTSqwCThLiDVWesbsips2yXPQiEyoB6-/view?usp=drive_link");
+  // Use the Google Drive direct download link:
+  const { scene } = useGLTF("https://drive.google.com/uc?export=download&id=1FTSqwCThLiDVWesbsips2yXPQiEyoB6-");
   const ref = useRef();
   const { mouse } = useThree();
 
