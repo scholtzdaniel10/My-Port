@@ -6,25 +6,20 @@ function AnimatedCharacter({ zoomed }) {
   const { scene } = useGLTF("/character.glb");
   const group = useRef();
 
-  // === MODEL ROTATION (pose) ===
-  const targetRotation = zoomed
-    ? [0.55, 0.1, 0] // Flip Y for right side
-    : [0, 0, 0];
-
-  // === MODEL POSITION (move right) ===
-  const targetPosition = [2, -0.5, 0]; // Move to right
+  const targetRotation = zoomed ? [0.55, 0.1, 0] : [0, 0, 0];
+  const targetPosition = [2, -0.5, 0];
 
   useFrame(() => {
     if (group.current) {
-      group.current.rotation.x += (targetRotation[0] - group.current.rotation.x) * 0.08;
-      group.current.rotation.y += (targetRotation[1] - group.current.rotation.y) * 0.08;
-      group.current.rotation.z += (targetRotation[2] - group.current.rotation.z) * 0.08;
+      group.current.rotation.x += (targetRotation[0] - group.current.rotation.x) * 0.03;
+      group.current.rotation.y += (targetRotation[1] - group.current.rotation.y) * 0.03;
+      group.current.rotation.z += (targetRotation[2] - group.current.rotation.z) * 0.03;
     }
   });
 
   return (
     <group ref={group} position={targetPosition}>
-      <Float speed={1.5} rotationIntensity={zoomed ? 0 : 0.5} floatIntensity={0.5}>
+      <Float speed={0.5} rotationIntensity={zoomed ? 0 : 0.3} floatIntensity={0.4}>
         <primitive object={scene} scale={zoomed ? 15 : 5} />
       </Float>
     </group>
@@ -32,16 +27,15 @@ function AnimatedCharacter({ zoomed }) {
 }
 
 function CameraController({ zoomed }) {
-  // === CAMERA POSITION (move right) ===
   const startPos = { x: 2.5, y: 0.5, z: 6 };
   const endPos = { x: 2.5, y: 1.2, z: 2.1 };
 
   useFrame(({ camera }) => {
     const target = zoomed ? endPos : startPos;
-    camera.position.x += (target.x - camera.position.x) * 0.08;
-    camera.position.y += (target.y - camera.position.y) * 0.08;
-    camera.position.z += (target.z - camera.position.z) * 0.08;
-    camera.lookAt(2.2, 2.1, 0); // Focus on right
+    camera.position.x += (target.x - camera.position.x) * 0.03;
+    camera.position.y += (target.y - camera.position.y) * 0.03;
+    camera.position.z += (target.z - camera.position.z) * 0.03;
+    camera.lookAt(2.2, 2.1, 0);
   });
   return null;
 }
