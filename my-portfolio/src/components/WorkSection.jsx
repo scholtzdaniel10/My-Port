@@ -7,7 +7,7 @@ const projects = [
 		description: "Built with React, Tailwind, Vite & R3F.",
 		tags: ["React", "Tailwind", "R3F"],
 		image: "/project1.png",
-		github: "https://github.com/yourname/my-portfolio",
+		github: "https://github.com/scholtzdaniel10/My-Port",
 		live: "https://your-portfolio-live-link.com",
 	},
 	{
