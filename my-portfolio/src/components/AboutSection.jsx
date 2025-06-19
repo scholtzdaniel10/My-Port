@@ -3,7 +3,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Float, Environment, useGLTF } from "@react-three/drei";
 
 function AnimatedCharacter({ zoomed }) {
-  const { scene } = useGLTF("/character.glb");
+  // Replace with your Google Drive direct link:
+  const { scene } = useGLTF("https://drive.google.com/file/d/1otNpoGaHrL51FoUlL-soUmg0X9cbCyy3/view?usp=sharing");
   const group = useRef();
 
   const targetRotation = zoomed ? [0.55, 0.1, 0] : [0, 0, 0];

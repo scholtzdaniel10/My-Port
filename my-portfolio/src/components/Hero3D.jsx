@@ -3,7 +3,8 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
 function CreatorStudioModel() {
-  const { scene } = useGLTF("/creators_studio_low_poly_challenge.glb");
+  // Replace with your Google Drive direct link:
+  const { scene } = useGLTF("https://drive.google.com/file/d/1FTSqwCThLiDVWesbsips2yXPQiEyoB6-/view?usp=drive_link");
   const ref = useRef();
   const { mouse } = useThree();
 
