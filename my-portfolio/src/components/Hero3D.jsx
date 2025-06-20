@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 
 function CreatorStudioModel() {
   // Use the Google Drive direct download link:
-  const { scene } = useGLTF("https://drive.google.com/uc?export=download&id=1FTSqwCThLiDVWesbsips2yXPQiEyoB6-");
+  const { scene } = useGLTF("creators_studio_low_poly_challenge.glb");
   const ref = useRef();
   const { mouse } = useThree();
 

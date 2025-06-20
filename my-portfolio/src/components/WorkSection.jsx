@@ -13,7 +13,7 @@ const projects = [
 	{
 		title: "TaskFlow-App",
 		description: "Built with React, Material UI, Vite & R3F. ",
-		tags: ["React", "Material UI", "Vite", "R3F"],
+		tags: ["React", "Material UI", "Vite",],
 		image: "/project3.png",
 		github: "https://github.com/jaderiley/Taskflow-app",
 		live: "https://your-taskflow-live-link.com",
@@ -21,7 +21,7 @@ const projects = [
 	{
 		title: "Paarthacive-Library",
 		description: "Built with React, Bulma UI, Vite & R3F. STILL IN PROGRESS!!!",
-		tags: ["React", "Bulma UI", "Vite", "R3F"],
+		tags: ["React", "Bulma UI", "Vite",],
 		image: "/project2.png",
 		github: "https://github.com/scholtzdaniel10/Paarthacive-Library-1",
 		live: "https://your-taskflow-live-link.com",

@@ -4,7 +4,7 @@ import { OrbitControls, Float, Environment, useGLTF } from "@react-three/drei";
 
 function AnimatedCharacter({ zoomed }) {
   // Replace with your Google Drive direct link:
-  const { scene } = useGLTF("https://drive.google.com/uc?export=download&id=1otNpoGaHrL51FoUlL-soUmg0X9cbCyy3");
+  const { scene } = useGLTF("character.glb");
   const group = useRef();
 
   const targetRotation = zoomed ? [0.55, 0.1, 0] : [0, 0, 0];
